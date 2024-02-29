@@ -26,7 +26,7 @@ By running this command, you're ensuring that TensorFlow is installed in your en
 !pip install n2v
 ```
 
-It seems like you're installing a library called N2V using the pip package manager. N2V, or Noise2Void, is a deep learning-based method for image denoising. Let's break down the line of code:
+Installing a library called N2V using the pip package manager. N2V, or Noise2Void, is a deep learning-based method for image denoising.
 
 ```
 !pip install n2v
@@ -38,7 +38,7 @@ install is a command for pip to install packages.
 n2v is the package (Noise2Void) you're installing.
 By running this command, you're installing the N2V package into your Python environment. N2V is likely to provide functions and tools specifically designed for the denoising task using deep learning techniques.
 
-After executing this command, you should be able to use the functionalities provided by the N2V library in your code. If you have any further code related to N2V or specific questions about using it, feel free to share!
+After executing this command, you should be able to use the functionalities provided by the N2V library in your code.
 
 ```
 import tensorflow as tf
@@ -66,7 +66,7 @@ print(tf.__version__): This line prints the version of TensorFlow installed in y
 
 print(n2v.__version__): This line prints the version of the N2V library installed. Similar to TensorFlow, checking the library version can be important to ensure compatibility with your code.
 
-By running these print statements, you can confirm which versions of TensorFlow and N2V you have installed. This can be crucial because different versions of libraries may have different features or behaviors. If there are specific questions or areas you'd like more information about, feel free to ask!
+By running these print statements, you can confirm which versions of TensorFlow and N2V you have installed. This can be crucial because different versions of libraries may have different features or behaviors.
 
 ```
 # We import all our dependencies.
@@ -115,7 +115,7 @@ from n2v.internals.N2V_DataGenerator import N2V_DataGenerator: This imports the 
 
 from matplotlib import pyplot as plt: This imports the pyplot module from the matplotlib library and gives it the alias plt. It is commonly used for creating visualizations, and you may use it to plot images or graphs.
 
-import urllib: This imports the urllib module, which is often used for making HTTP requests. It may be used for downloading data or models.
+import urllib: This imports the urllib module, which is often used for making HTTP requests. It can be used for downloading data or models.
 
 import os: This imports the os module, which provides a way of using operating system-dependent functionality, such as reading or writing files and directories.
 
@@ -123,7 +123,7 @@ import zipfile: This imports the zipfile module, which allows working with zip a
 
 import ssl and setting SSL context: This is modifying the SSL context to create an unverified context. This is sometimes done to bypass SSL certificate verification during HTTPS requests. Be cautious when using this, as it can expose you to security risks.
 
-These imports suggest that your code involves deep learning with the N2V model, data manipulation, visualization, and potentially downloading or handling data files. If you have more code or specific questions about any part, feel free to share!
+These imports suggest that your code involves deep learning with the N2V model, data manipulation, visualization, and potentially downloading or handling data files.
 
 ```
 # We create our DataGenerator-object.
@@ -143,7 +143,7 @@ N2V_DataGenerator(): This line is creating an instance of the N2V_DataGenerator 
 
 datagen = N2V_DataGenerator(): This line assigns the created instance of N2V_DataGenerator to the variable datagen. By doing this, you can use the datagen variable to access the methods and attributes of the N2V_DataGenerator class.
 
-The use of a data generator is common in deep learning to efficiently handle large datasets by loading and processing them in smaller batches during training. If you have more code or specific questions about the usage of the datagen object, feel free to share!
+The use of a data generator is common in deep learning to efficiently handle large datasets by loading and processing them in smaller batches during training.
 
 ```
 #METHOD 1: Loading images using load_imgs_from_directory method
@@ -196,14 +196,14 @@ print('shape without alpha: ', imgs[0].shape): This line prints the shape of the
 
 print('The data type of the first image is: ', imgs[0].dtype): This line prints the data type of the first image. The data type represents how the pixel values are stored (e.g., as integers or floats).
 
-This code is preparing your image data by loading images from a directory, checking and adjusting their format as needed. If you have more code or specific questions, feel free to share!
+This code is preparing your image data by loading images from a directory, checking and adjusting their format as needed.
 
 ```
 print(len(imgs))
 print(imgs[0].shape)
 print(imgs[0].dtype)
 ```
-It seems like you're interested in exploring the properties of the loaded images further. Let's break down the additional lines of code you've provided:
+It seems like we're interested in exploring the properties of the loaded images further. 
 
 ```
 print(len(imgs))
@@ -218,7 +218,7 @@ print(imgs[0].shape): This line prints the shape of the first image in the list.
 
 print(imgs[0].dtype): This line prints the data type of the pixel values in the first image. The data type represents how the pixel values are stored, such as integers (int) or floating-point numbers (float).
 
-By running these lines, you're getting a better understanding of the characteristics of the loaded images, including their count, shape, and data type. If you have any specific questions about the output or if you want to perform further analysis, feel free to let me know!
+By running these lines, you're getting a better understanding of the characteristics of the loaded images, including their count, shape, and data type. 
 
 ```
 # Let's look at the image.
@@ -243,18 +243,17 @@ plt.imshow(imgs[0][0, :, :, :]): This line uses the imshow function from matplot
 
 plt.show(): This displays the figure with the image. The image will be shown in a separate window or inline, depending on your environment.
 
-This code snippet is a quick way to visually inspect the first image in your dataset. If you have more images and you want to visualize them, you might consider using a loop or a grid layout to display multiple images. If you have any specific questions about the output or if you'd like to perform additional visualization tasks, feel free to let me know!
+This code snippet is a quick way to visually inspect the first image in your dataset. If you have more images and you want to visualize them, you might consider using a loop or a grid layout to display multiple images. If you have any specific questions about the output.
 
 ```
 patch_size = 64
 ```
-It looks like you've set the variable patch_size to the value 64. This variable likely represents the size of patches that will be extracted from the images during the training or testing process.
+It looks like we've set the variable patch_size to the value 64. This variable likely represents the size of patches that will be extracted from the images during the training or testing process.
 
 For example, in the context of image processing or deep learning, you might be dividing your images into smaller patches (sub-images) of size 64x64 pixels. This is a common practice to train models on smaller parts of the images, allowing them to learn patterns and features more effectively.
 
 If you use this patch_size later in your code, it may be involved in tasks such as data preprocessing, data augmentation, or specifying the input size for your neural network.
 
-If you have additional code or specific questions about how this patch_size variable is used, feel free to share, and I'll be happy to assist you further!
 
 ```
 # Patches are extracted from all images and combined into a single numpy array
@@ -262,7 +261,7 @@ If you have additional code or specific questions about how this patch_size vari
 patch_shape = (patch_size,patch_size)
 patches = datagen.generate_patches_from_list(imgs, shape=patch_shape)
 ```
-It seems like you are generating patches from the loaded images using the generate_patches_from_list method of your datagen object. Let's break down the code:
+It seems like we are generating patches from the loaded images using the generate_patches_from_list method of our datagen object. Let's break down the code:
 
 ```
 # Patches are extracted from all images and combined into a single numpy array
@@ -275,7 +274,7 @@ patch_shape = (patch_size, patch_size): This line defines the shape of the patch
 
 patches = datagen.generate_patches_from_list(imgs, shape=patch_shape): This line uses the generate_patches_from_list method of your datagen object to extract patches from the list of images (imgs). The shape parameter specifies the desired shape for the patches, which you set using patch_shape. The resulting patches are combined into a single NumPy array, and they will likely be used for training or testing your deep learning model.
 
-By generating patches, you are breaking down the images into smaller pieces, allowing your model to learn from more localized features and patterns. If you have more code or specific questions about how these patches are used, feel free to share!
+By generating patches, you are breaking down the images into smaller pieces, allowing your model to learn from more localized features and patterns.
 
 ```
 Generated patches: (480, 64, 64, 3)
@@ -292,7 +291,7 @@ The output (480, 64, 64, 3) indicates the shape of the array containing the gene
 
 So, overall, the shape (480, 64, 64, 3) tells you that you have 480 patches, and each patch has dimensions of 64x64 pixels with 3 color channels (RGB).
 
-These generated patches are likely to be used as training data for your denoising model. If you have further steps in your code or specific questions, feel free to share!
+These generated patches are likely to be used as training data for your denoising model.
 
 ```
 # Patches are created so they do not overlap.
@@ -334,7 +333,7 @@ int(...): This wraps the result in the int function, ensuring that the result is
 
 So, train_val_split is calculated as 80% of the total number of patches, and it represents the index at which you'll split your patches into training and validation sets. The remaining 20% of patches will be used for validation.
 
-This approach is a common way to split datasets for training and validation in machine learning. The training set is used to train the model, and the validation set is used to evaluate the model's performance on data it has not seen during training, helping to detect overfitting or other issues. If you have more questions or need further clarification, feel free to ask!
+This approach is a common way to split datasets for training and validation in machine learning. The training set is used to train the model, and the validation set is used to evaluate the model's performance on data it has not seen during training, helping to detect overfitting or other issues. 
 
 ```
 # Let's look at two patches.
@@ -376,7 +375,7 @@ plt.title('Validation Patch'): This line adds a title to the second subplot indi
 
 plt.show(): This command displays the entire figure with both subplots.
 
-This code snippet allows you to visually compare a training patch with a validation patch side by side. It's a good practice to inspect the data you're working with to get a sense of its characteristics. If you have more questions or if there's anything specific you'd like to know, feel free to ask!
+This code snippet allows you to visually compare a training patch with a validation patch side by side. It's a good practice to inspect the data you're working with to get a sense of its characteristics.
 
 ```
 # train_steps_per_epoch is set to (number of training patches)/(batch size), like this each training patch
@@ -485,8 +484,6 @@ Channel Configuration:
 single_net_per_channel=False: This parameter might indicate whether a single neural network is used for all channels (set to False), or separate networks are used for each channel.
 This configuration provides a comprehensive setup for training your N2V model. It includes architectural choices, training parameters, and N2V-specific configurations. Adjusting these parameters can have a significant impact on the model's performance, and they are often fine-tuned based on the characteristics of the dataset and the specific task at hand.
 
-If you have more specific questions about any of these parameters or if there's a particular aspect you'd like to explore further, feel free to ask!
-
 ```
 # a name used to identify the model --> change this to something sensible!
 model_name = 'n2v_2D_stars'
@@ -523,7 +520,6 @@ model_name: The name you assigned to your model.
 basedir: The base directory where your model will be saved.
 This line effectively instantiates the N2V model with the provided configuration, and the model will be saved in the specified directory.
 
-If you have further steps related to training or using the model, or if you have any specific questions, feel free to share!
 
 ```
 # We are ready to start training now.
@@ -544,8 +540,6 @@ X_val: The validation set, which consists of patches reserved for evaluating the
 history: The training process returns a history object, which typically contains information about the training and validation metrics across epochs. You can use this object to analyze the training progress, check for overfitting, and make decisions about further training or adjustments.
 
 By running this line, your N2V model will start learning from the training data, and its performance will be evaluated on the validation set. The training process involves updating the model's weights based on the optimization algorithm and the specified loss function (mean squared error in this case).
-
-If you have any specific questions about the training process or if you want to analyze the training history (history), feel free to let me know!
 
 ```
 print(sorted(list(history.history.keys())))
@@ -572,7 +566,7 @@ The first argument (history) is the object containing training history informati
 
 The second argument (['loss', 'val_loss']) is a list specifying which metrics to plot. In this case, it's plotting both the training loss and the validation loss.
 
-This code will provide you with a visual representation of how your model is performing during training and whether there are signs of overfitting or underfitting. If you have more specific questions about the output or if there's anything else you'd like to explore, feel free to ask!
+This code will provide you with a visual representation of how your model is performing during training and whether there are signs of overfitting or underfitting. If you have more specific questions about the output
 
 ```
 what is epoch?
